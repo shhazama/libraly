@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>{{object.customer_place.name}} {{object.customer_place.place}}</h1>
+
+
+<div class="report-detail">
+ <p>記入者：{{object.writer}}</p> 
+ <p>作業者：{{object.worker}}</p>  
+ <p>記入日:{{object.write_date}}</p>
+ <p>作業時間：{{object.work_time_s}}  ~  {{object.work_time_f}}</p>
+ <p>作業内容{{object.work_content}}</p>
+
+</div>
+
+
+{% endblock content %}

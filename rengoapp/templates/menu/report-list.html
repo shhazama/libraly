@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>作業報告書一覧</h1>
+
+{% for item in object_list%}
+<div class="report-list">
+
+ <a>{{item.customer_place.user}}</a>  
+ <a href="{% url 'report-detail' item.pk%}" >{{item.write_date}}</a>
+</div>
+{% endfor %}
+
+<a href="{% url 'create-report' %}" class="submit">+ 新規作成</a>
+
+{% endblock content %}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% for item in object_list%}
+<div class="kyakusaki">
+ <h2 >{{item.name}}</h2>  
+ <a href="{% url 'farm-menu' item.pk %}" >{{item.planet}}</a>
+</div>
+{% endfor %}
+
+<a href="{% url 'create-customer' %}" class="submit">+ 追加する</a>
+
+{% endblock content %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{%block title %} 
+
+{% endblock %}
+
+{% block content %}
+<form method="POST" enctype="multipart/form-data" class="p-4 m-4 bg-light border border-success rounded form-group">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type='submit' value='登録'>
+    
+</form>
+<a type='submit' href="{% url 'home' %}"> 戻る<a>
+
+
+{% endblock content %}
